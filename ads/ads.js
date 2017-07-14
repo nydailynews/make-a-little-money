@@ -28,6 +28,11 @@ var nydn_ads = function(ad_tag) {
           .setTargeting("position","x103");
           });
           googletag.cmd.push(function() {
+          googletag.defineSlot('/4692832/NYDN/Interactive',  [[728, 90]], 'div-gpt-ad-x105').addService(googletag.pubads())
+          .setTargeting("interactive",ad_tag)
+          .setTargeting("position","x105");
+          });
+          googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/NYDN/Interactive',  [[300, 250]], 'div-gpt-ad-1423507761396-3').addService(googletag.pubads())
           .setTargeting("interactive",ad_tag)
           .setTargeting("position","x104");
@@ -52,6 +57,11 @@ var nydn_ads = function(ad_tag) {
           googletag.defineSlot('/4692832/M.NYDN/Interactive', [[300, 250]], 'div-gpt-ad-1423507761396-2').addService(googletag.pubads())
           .setTargeting("interactive",ad_tag)
           .setTargeting("position","x103");          
+          });
+          googletag.cmd.push(function() {
+          googletag.defineSlot('/4692832/M.NYDN/Interactive', [[320, 50]], 'div-gpt-ad-x105').addService(googletag.pubads())
+          .setTargeting("interactive",ad_tag)
+          .setTargeting("position","x105");
           });
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/M.NYDN/Interactive', [[300, 250]], 'div-gpt-ad-1423507761396-3').addService(googletag.pubads())
