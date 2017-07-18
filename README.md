@@ -12,10 +12,8 @@ Also, change "longform" to whatever category fits the project.
 
 ### Ad positions
 
-```html
-div-gpt-ad-x101
-div-gpt-ad-1423507761396-1
-div-gpt-ad-1423507761396-2
-div-gpt-ad-1423507761396-3
-div-gpt-ad-x105
-```
+* div-gpt-ad-x101
+* div-gpt-ad-1423507761396-1
+* div-gpt-ad-1423507761396-2
+* div-gpt-ad-1423507761396-3
+* div-gpt-ad-x105
