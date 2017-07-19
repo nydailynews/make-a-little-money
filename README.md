@@ -17,3 +17,15 @@ Also, change "longform" to whatever category fits the project.
 * div-gpt-ad-1423507761396-2
 * div-gpt-ad-1423507761396-3
 * div-gpt-ad-x105
+
+### Ad markup
+
+```html
+  <div class="center">
+    <span style="font-size:10px; color:#999;font-family:sans-serif;">ADVERTISEMENT</span>
+    <div id='div-gpt-ad-1423507761396-2'>
+        <script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-2'); });
+        </script>
+    </div>
+  </div>```
