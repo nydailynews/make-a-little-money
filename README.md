@@ -28,4 +28,5 @@ Also, change "longform" to whatever category fits the project.
             googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-2'); });
         </script>
     </div>
-  </div>```
+  </div>
+```
