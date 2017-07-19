@@ -18,7 +18,12 @@ Also, change "longform" to whatever category fits the project.
 * div-gpt-ad-1423507761396-3
 * div-gpt-ad-x105
 
-### Ad markup
+### Ad styles & markup
+
+```css
+.center { margin: auto; }
+.center > span { font-size:10px; color:#999;font-family:sans-serif; }
+```
 
 ```html
   <div class="center">
