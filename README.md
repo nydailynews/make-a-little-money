@@ -27,7 +27,7 @@ Also, change "longform" to whatever category fits the project.
 
 ```html
   <div class="center">
-    <span style="font-size:10px; color:#999;font-family:sans-serif;">ADVERTISEMENT</span>
+    <span>ADVERTISEMENT</span>
     <div id='div-gpt-ad-1423507761396-2'>
         <script>
             googletag.cmd.push(function() { googletag.display('div-gpt-ad-1423507761396-2'); });
