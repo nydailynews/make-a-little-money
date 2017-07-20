@@ -23,6 +23,7 @@ Also, change "longform" to whatever category fits the project.
 ```css
 .center {
     margin: auto;
+    text-align: center;
 }
 .ad > span {
     font-size:10px;
