@@ -21,12 +21,18 @@ Also, change "longform" to whatever category fits the project.
 ### Ad styles & markup
 
 ```css
-.center { margin: auto; }
-.center > span { font-size:10px; color:#999;font-family:sans-serif; }
+.center {
+    margin: auto;
+}
+.ad > span {
+    font-size:10px;
+    color:#999;
+    font-family:sans-serif;
+}
 ```
 
 ```html
-  <div class="center">
+  <div class="ad center">
     <span>ADVERTISEMENT</span>
     <div id='div-gpt-ad-1423507761396-2'>
         <script>
