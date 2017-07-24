@@ -42,3 +42,13 @@ Also, change "longform" to whatever category fits the project.
     </div>
   </div>
 ```
+```html
+  <div class="ad center">
+    <span>ADVERTISEMENT</span>
+    <div id='div-gpt-ad-x105'>
+        <script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-x105'); });
+        </script>
+    </div>
+  </div>
+```
