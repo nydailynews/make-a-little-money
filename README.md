@@ -31,7 +31,15 @@ Also, change "longform" to whatever category fits the project.
     font-family:sans-serif;
 }
 ```
-
+```html
+  <div class="ad center">
+    <div id='div-gpt-ad-x101'>
+        <script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-x101'); });
+        </script>
+    </div>
+  </div>
+```
 ```html
   <div class="ad center">
     <div id='div-gpt-ad-1423507761396-1'>
