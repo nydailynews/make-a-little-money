@@ -1,4 +1,5 @@
 var is_mobile = /Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+var is_tablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/i.test(navigator.userAgent);
 var googletag = googletag || {};
 var nydn_ads = function(ad_tag) {
         googletag.cmd = googletag.cmd || [];
@@ -11,7 +12,7 @@ var nydn_ads = function(ad_tag) {
         node.parentNode.insertBefore(gads, node);
         })();
 
-      if ( !is_mobile ) {
+      if ( !is_mobile || is_tablet ) {
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/NYDN/Interactive',  [[728, 90]], 'div-gpt-ad-x101').addService(googletag.pubads())
           .setTargeting("interactive",ad_tag)
@@ -42,7 +43,7 @@ var nydn_ads = function(ad_tag) {
         }
 
         // mobile ads
-        if ( is_mobile ) {        
+       else {        
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/M.NYDN/Interactive', [[320, 50]], 'div-gpt-ad-x101').addService(googletag.pubads())
           .setTargeting("interactive",ad_tag)
