@@ -88,6 +88,7 @@ function ready(fn) {
   }
 }
 window.onload = function() {
+    if ( !is_mobile && !is_tablet ) {
     // Load the script, then append the necessary elements,
     // and then fire the activation on those elements.
     window._taboola = window._taboola || [];
@@ -123,4 +124,5 @@ window.onload = function() {
     // Close out
     window._taboola = window._taboola || [];
     _taboola.push({flush: true});
+    }
 }
