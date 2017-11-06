@@ -88,41 +88,40 @@ function ready(fn) {
   }
 }
 window.onload = function() {
-    if ( !is_mobile && !is_tablet ) {
-    // Load the script, then append the necessary elements,
-    // and then fire the activation on those elements.
-    window._taboola = window._taboola || [];
-    _taboola.push({article:'auto'});
-    !function (e, f, u, i) {
-    if (!document.getElementById(i)){
-      e.async = 1;
-      e.src = u;
-      e.id = i;
-      f.parentNode.insertBefore(e, f);
-    }
-    }(document.createElement('script'),
-    document.getElementsByTagName('script')[0],
-    '//cdn.taboola.com/libtrc/nydailynews-interactivepages/loader.js',
-    'tb_loader_script');
-    if(window.performance && typeof window.performance.mark == 'function')
-    {window.performance.mark('tbl_ic');}
-    console.log('hi');
+    if ( !is_mobile ) {
+        // Load the script, then append the necessary elements,
+        // and then fire the activation on those elements.
+        window._taboola = window._taboola || [];
+        _taboola.push({article:'auto'});
+        !function (e, f, u, i) {
+        if (!document.getElementById(i)){
+          e.async = 1;
+          e.src = u;
+          e.id = i;
+          f.parentNode.insertBefore(e, f);
+        }
+        }(document.createElement('script'),
+        document.getElementsByTagName('script')[0],
+        '//cdn.taboola.com/libtrc/nydailynews-interactivepages/loader.js',
+        'tb_loader_script');
+        if(window.performance && typeof window.performance.mark == 'function')
+        {window.performance.mark('tbl_ic');}
 
-    // Append
-    var el = document.getElementById('templatefooter');
-    el.insertAdjacentHTML('beforebegin', '<div id="taboola-interactive_pages-3x3"></div>');
+        // Append
+        var el = document.getElementById('templatefooter');
+        el.insertAdjacentHTML('beforebegin', '<div id="taboola-interactive_pages-3x3"></div>');
 
-    // Fire
-    window._taboola = window._taboola || [];
-    _taboola.push({
-        mode: 'thumbnails-b',
-        container: 'taboola-interactive_pages-3x3',
-        placement: 'interactive_pages-3x3',
-        target_type: 'mix'
-    });
+        // Fire
+        window._taboola = window._taboola || [];
+        _taboola.push({
+            mode: 'thumbnails-b',
+            container: 'taboola-interactive_pages-3x3',
+            placement: 'interactive_pages-3x3',
+            target_type: 'mix'
+        });
 
-    // Close out
-    window._taboola = window._taboola || [];
-    _taboola.push({flush: true});
+        // Close out
+        window._taboola = window._taboola || [];
+        _taboola.push({flush: true});
     }
 }
