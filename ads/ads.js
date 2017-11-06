@@ -34,6 +34,10 @@ var nydn_ads = function(ad_tag) {
           .setTargeting("position","x105");
           });
           googletag.cmd.push(function() {
+          googletag.defineSlot('/4692832/NYDN/Interactive',  [[728, 90]], 'div-gpt-ad-1423507761396-4').addService(googletag.pubads())
+          .setTargeting("interactive",ad_tag)
+          });
+          googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/NYDN/Interactive',  [[300, 250]], 'div-gpt-ad-1423507761396-3').addService(googletag.pubads())
           .setTargeting("interactive",ad_tag)
           .setTargeting("position","x104");
@@ -63,6 +67,10 @@ var nydn_ads = function(ad_tag) {
           googletag.defineSlot('/4692832/M.NYDN/Interactive', [[320, 50]], 'div-gpt-ad-x105').addService(googletag.pubads())
           .setTargeting("interactive",ad_tag)
           .setTargeting("position","x105");
+          });
+          googletag.cmd.push(function() {
+          googletag.defineSlot('/4692832/NYDN/Interactive',  [[728, 90]], 'div-gpt-ad-1423507761396-4').addService(googletag.pubads())
+          .setTargeting("interactive",ad_tag)
           });
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/M.NYDN/Interactive', [[300, 250]], 'div-gpt-ad-1423507761396-3').addService(googletag.pubads())
@@ -124,4 +132,12 @@ window.onload = function() {
         window._taboola = window._taboola || [];
         _taboola.push({flush: true});
     }
+	(function() {
+        var l = location.hash + location.search;
+        if (l.indexOf('disable-ensighten') >= 0) return;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = '//nexus.ensighten.com/tronc/nydailynews' + (l.indexOf('ensightenEnv=dev') > -1 ? 'dev' : 'prod') + '/Bootstrap.js';
+        document.head.appendChild(s);
+	})();
 }
