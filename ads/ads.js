@@ -109,7 +109,7 @@ window.onload = function() {
 
         // Append
         var el = document.getElementById('templatefooter');
-        el.insertAdjacentHTML('beforebegin', '<div id="taboola-interactive_pages-3x3"></div>');
+        el.insertAdjacentHTML('beforebegin', '<div id="taboola-interactive_pages-3x3" style="max-width: 800px; margin: auto"></div>');
 
         // Fire
         window._taboola = window._taboola || [];
