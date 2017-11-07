@@ -69,7 +69,7 @@ var nydn_ads = function(ad_tag) {
           .setTargeting("position","x105");
           });
           googletag.cmd.push(function() {
-          googletag.defineSlot('/4692832/NYDN/Interactive',  [[728, 90]], 'div-gpt-ad-1423507761396-4').addService(googletag.pubads())
+          googletag.defineSlot('/4692832/NYDN/Interactive',  [[320, 50]], 'div-gpt-ad-1423507761396-4').addService(googletag.pubads())
           .setTargeting("interactive",ad_tag)
           });
           googletag.cmd.push(function() {
