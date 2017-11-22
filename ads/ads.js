@@ -11,35 +11,41 @@ var nydn_ads = function(ad_tag) {
         var node = document.getElementsByTagName('script')[0];
         node.parentNode.insertBefore(gads, node);
         })();
+        // DFP has a character limit.
+        var target_section = 'interactive';
+        if ( ad_tag.length >= 20 ) {
+            var kill_chars = ad_tag.length - 19;
+            target_section = target_section.substring(kill_chars);
+        }
 
       if ( !is_mobile || is_tablet ) {
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/NYDN/Interactive',  [[728, 90]], 'div-gpt-ad-x101').addService(googletag.pubads())
-          .setTargeting("interactive",ad_tag)
+          .setTargeting(target_section,ad_tag)
           .setTargeting("position","x101");
           });
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/NYDN/Interactive',  [[300, 250]], 'div-gpt-ad-1423507761396-1').addService(googletag.pubads())
-          .setTargeting("interactive",ad_tag)
+          .setTargeting(target_section,ad_tag)
           .setTargeting("position","x102");
           });
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/NYDN/Interactive',  [[300, 250]], 'div-gpt-ad-1423507761396-2').addService(googletag.pubads())
-          .setTargeting("interactive",ad_tag)
+          .setTargeting(target_section,ad_tag)
           .setTargeting("position","x103");
           });
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/NYDN/Interactive',  [[728, 90]], 'div-gpt-ad-x105').addService(googletag.pubads())
-          .setTargeting("interactive",ad_tag)
+          .setTargeting(target_section,ad_tag)
           .setTargeting("position","x105");
           });
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/NYDN/Interactive',  [[728, 90]], 'div-gpt-ad-1423507761396-4').addService(googletag.pubads())
-          .setTargeting("interactive",ad_tag)
+          .setTargeting(target_section,ad_tag)
           });
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/NYDN/Interactive',  [[300, 250]], 'div-gpt-ad-1423507761396-3').addService(googletag.pubads())
-          .setTargeting("interactive",ad_tag)
+          .setTargeting(target_section,ad_tag)
           .setTargeting("position","x104");
           googletag.pubads().enableSingleRequest();
           googletag.enableServices();
@@ -50,31 +56,31 @@ var nydn_ads = function(ad_tag) {
        else {        
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/M.NYDN/Interactive', [[320, 50]], 'div-gpt-ad-x101').addService(googletag.pubads())
-          .setTargeting("interactive",ad_tag)
+          .setTargeting(target_section,ad_tag)
           .setTargeting("position","x101");
           });
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/M.NYDN/Interactive', [[300, 250]], 'div-gpt-ad-1423507761396-1').addService(googletag.pubads())
-          .setTargeting("interactive",ad_tag)
+          .setTargeting(target_section,ad_tag)
           .setTargeting("position","x102");
           });
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/M.NYDN/Interactive', [[300, 250]], 'div-gpt-ad-1423507761396-2').addService(googletag.pubads())
-          .setTargeting("interactive",ad_tag)
+          .setTargeting(target_section,ad_tag)
           .setTargeting("position","x103");          
           });
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/M.NYDN/Interactive', [[320, 50]], 'div-gpt-ad-x105').addService(googletag.pubads())
-          .setTargeting("interactive",ad_tag)
+          .setTargeting(target_section,ad_tag)
           .setTargeting("position","x105");
           });
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/NYDN/Interactive',  [[320, 50]], 'div-gpt-ad-1423507761396-4').addService(googletag.pubads())
-          .setTargeting("interactive",ad_tag)
+          .setTargeting(target_section,ad_tag)
           });
           googletag.cmd.push(function() {
           googletag.defineSlot('/4692832/M.NYDN/Interactive', [[300, 250]], 'div-gpt-ad-1423507761396-3').addService(googletag.pubads())
-          .setTargeting("interactive",ad_tag)
+          .setTargeting(target_section,ad_tag)
           .setTargeting("position","x104");
           googletag.pubads().enableSingleRequest();
           googletag.enableServices();
