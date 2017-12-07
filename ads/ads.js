@@ -104,6 +104,11 @@ function ready(fn) {
 window.onload = function() {
     // This is the gentlest scroll handler and watcher I could write.
     var did_scroll, scroll_pos = 0, 0;
+    var height_limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
+                           document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+    var bottom = height_limit - window.innerHeight;
+    var trigger = Math.floor(bottom*.8);
+
     window.addEventListener('scroll', function(e) {
         if ( scroll_pos !== window.scrollY ) {
             scroll_pos = window.scrollY;
@@ -114,11 +119,14 @@ window.onload = function() {
     {
         if ( did_scroll === 1 )
         {
-            window.requestAnimationFrame(function() { scroll_function() });
+            window.requestAnimationFrame(function() {
+                if ( scroll_pos >== trigger ) scroll_function();
+            });
             did_scroll = 0;
         }
     }, 1000);
-    if ( !is_mobile ) {
+
+    function scroll_function() {
         // Load the script, then append the necessary elements,
         // and then fire the activation on those elements.
         window._taboola = window._taboola || [];
