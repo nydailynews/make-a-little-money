@@ -102,22 +102,22 @@ function ready(fn) {
   }
 }
 window.onload = function() {
-        // This is the gentlest scroll handler and watcher I could write.
-        var did_scroll, scroll_pos = 0, 0;
-        window.addEventListener('scroll', function(e) {
-            if ( scroll_pos !== window.scrollY ) {
-                scroll_pos = window.scrollY;
-                did_scroll = 1;
-            }
-        });
-        setInterval( function()
+    // This is the gentlest scroll handler and watcher I could write.
+    var did_scroll, scroll_pos = 0, 0;
+    window.addEventListener('scroll', function(e) {
+        if ( scroll_pos !== window.scrollY ) {
+            scroll_pos = window.scrollY;
+            did_scroll = 1;
+        }
+    });
+    setInterval( function()
+    {
+        if ( did_scroll === 1 )
         {
-            if ( did_scroll === 1 )
-            {
-                window.requestAnimationFrame(function() { scroll_function() });
-                did_scroll = 0;
-            }
-        }, 1000);
+            window.requestAnimationFrame(function() { scroll_function() });
+            did_scroll = 0;
+        }
+    }, 1000);
     if ( !is_mobile ) {
         // Load the script, then append the necessary elements,
         // and then fire the activation on those elements.
