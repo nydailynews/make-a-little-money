@@ -103,7 +103,7 @@ function ready(fn) {
 }
 window.onload = function() {
     // This is the gentlest scroll handler and watcher I could write.
-    var did_scroll, scroll_pos = 0, 0;
+    var did_scroll = 0, scroll_pos = 0;
     var height_limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
                            document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
     var bottom = height_limit - window.innerHeight;
@@ -120,7 +120,7 @@ window.onload = function() {
         if ( did_scroll === 1 )
         {
             window.requestAnimationFrame(function() {
-                if ( scroll_pos >== trigger ) scroll_function();
+                if ( scroll_pos >= trigger ) scroll_function();
             });
             did_scroll = 0;
         }
