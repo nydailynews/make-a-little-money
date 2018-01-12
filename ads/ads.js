@@ -108,6 +108,7 @@ window.onload = function() {
                            document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
     var bottom = height_limit - window.innerHeight;
     var trigger = Math.floor(bottom*.8);
+    taboola_times = 0;
 
     window.addEventListener('scroll', function(e) {
         if ( scroll_pos !== window.scrollY ) {
@@ -127,6 +128,8 @@ window.onload = function() {
     }, 1000);
 
     function scroll_function() {
+        if ( taboola_times > 1 ) return false;
+        taboola_times += 1;
         // Load the script, then append the necessary elements,
         // and then fire the activation on those elements.
         window._taboola = window._taboola || [];
