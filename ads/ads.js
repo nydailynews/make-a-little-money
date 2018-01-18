@@ -188,4 +188,30 @@ window.onload = function() {
         s.src = '//nexus.ensighten.com/tronc/nydailynews' + (l.indexOf('ensightenEnv=dev') > -1 ? 'dev' : 'prod') + '/Bootstrap.js';
         document.head.appendChild(s);
 	})();
+    
+    // PAYWALL
+    if ( document.location.host === 'interactive.nydailynews.com' )
+    {
+        // PAYWALL - PROD
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = '//ssor.tribdss.com/reg/tribune/nydnews-interactive.min.js';
+        document.head.appendChild(s);
+        s = document.createElement('script');
+        s.async = true;
+        s.src = '//www.tribdss.com/meter/nydnews-interactive.min.js';
+        document.head.appendChild(s);
+    }
+    else
+    {
+        // PAYWALL - STAGING
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = '//ssor.trb.stage.tribdev.com/reg/tribune/nydnews-interactive.min.js';
+        document.head.appendChild(s);
+        s = document.createElement('script');
+        s.async = true;
+        s.src = '//www.dss.trb.stage.tribdev.com/meter/nydnews-interactive.min.js';
+        document.head.appendChild(s);
+    }
 }
