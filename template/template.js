@@ -210,11 +210,11 @@ window.onload = function() {
             var s = document.createElement('script');
             s.async = true;
             s.src = '//ssor.trb.stage.tribdev.com/reg/tribune/nydnews-interactive.min.js';
-            document.head.appendChild(s);
+            //document.head.appendChild(s);
             s = document.createElement('script');
             s.async = true;
             s.src = '//www.dss.trb.stage.tribdev.com/meter/nydnews-interactive.min.js';
-            document.head.appendChild(s);
+            //document.head.appendChild(s);
         }
     }
     if ( typeof jQuery === 'undefined' ) {
